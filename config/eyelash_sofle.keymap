@@ -75,11 +75,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1          &kp N2     &kp N3    &kp N4            &kp N5    &kp LA(Q)      &kp N6  &kp N7            &kp N8     &kp N9     &kp N0             &kp LS(SPACE)
-&kp TAB     &kp Q           &kp W      &kp E     &kp R             &kp T     &kp LA(LS(Q))  &kp Y   &kp U             &kp I      &kp O      &kp P              &kp BSLH
-&kp LGUI    &kp A           &kp S      &kp D     &mt LEFT_SHIFT F  &kp G     &kp LS(LA(W))  &kp H   &mt LEFT_SHIFT J  &kp K      &kp L      &kp SEMI           &kp APOS
-&kp LSHFT   &kp Z           &kp X      &kp C     &kp V             &kp B     &kp LA(W)      &kp N   &kp M             &kp COMMA  &kp DOT    &kp FSLH           &kp ENTER
-&kp C_MUTE  &kp LS(LG(N4))  &kp LCTRL  &kp LALT  &kp SPACE         &mo 1     &kp ENTER      &mo 1   &kp BACKSPACE     &kp MINUS  &kp EQUAL  &kp LS(LG(SPACE))
+&kp ESC     &kp N1          &kp N2     &kp N3      &kp N4            &kp N5    &kp LA(Q)      &kp N6  &kp N7            &kp N8      &kp N9     &kp N0             &kp LS(BACKSPACE)
+&kp TAB     &kp Q           &kp W      &kp E       &kp R             &kp T     &kp LA(LS(Q))  &kp Y   &kp U             &kp I       &kp O      &kp P              &kp BSLH
+&kp LGUI    &kp A           &kp S      &mt LCMD D  &mt LEFT_SHIFT F  &kp G     &kp LS(LA(W))  &kp H   &mt LEFT_SHIFT J  &mt LCMD K  &kp L      &kp SEMI           &kp APOS
+&kp LSHFT   &kp Z           &kp X      &kp C       &kp V             &kp B     &kp LA(W)      &kp N   &kp M             &kp COMMA   &kp DOT    &kp FSLH           &kp ENTER
+&kp C_MUTE  &kp LS(LG(N4))  &kp LCTRL  &kp LALT    &kp SPACE         &mo 1     &kp ENTER      &mo 1   &kp BACKSPACE     &kp MINUS   &kp EQUAL  &kp LS(LG(SPACE))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -89,7 +89,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp LS(LG(Y))    &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp LS(LG(Y))    &kp END          &kp UP      &kp HOME   &kp LEFT_BRACE    &kp RIGHT_BRACE
 &trans      &kp TILDE        &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp TILDE         &kp GRAVE
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
