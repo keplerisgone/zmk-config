@@ -68,6 +68,27 @@
 
             label = "SHIFT_MCLK";
         };
+
+        // game 레이어 진입: 빨강 약하게 켜기 (hue=0, sat=100, brt=20)
+        to_game: to_game {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &to 2>,
+                <&macro_tap &rgb_ug RGB_ON>,
+                <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,20)>;
+            label = "TO_GAME";
+        };
+
+        // game 레이어 탈출: LED 끄기
+        from_game: from_game {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &to 0>,
+                <&macro_tap &rgb_ug RGB_OFF>;
+            label = "FROM_GAME";
+        };
     };
 
     keymap {
@@ -79,7 +100,7 @@
 &kp TAB     &kp Q           &kp W      &kp E       &kp R             &kp T     &kp LA(LS(Q))  &kp Y   &kp U             &kp I       &kp O      &kp P              &kp BSLH
 &kp LGUI    &kp A           &kp S      &mt LCMD D  &mt LEFT_SHIFT F  &kp G     &kp LS(LA(W))  &kp H   &mt LEFT_SHIFT J  &mt LCMD K  &kp L      &kp SEMI           &kp APOS
 &kp LSHFT   &kp Z           &kp X      &kp C       &kp V             &kp B     &kp LA(W)      &kp N   &kp M             &kp COMMA   &kp DOT    &kp FSLH           &kp ENTER
-&kp C_MUTE  &kp LS(LG(N4))  &kp LCTRL  &kp LALT    &kp SPACE         &mo 1     &to 2          &mo 1   &kp BACKSPACE     &kp MINUS   &kp EQUAL  &kp LS(LG(SPACE))
+&kp C_MUTE  &kp LS(LG(N4))  &kp LCTRL  &kp LALT    &kp SPACE         &mo 1     &to_game       &mo 1   &kp BACKSPACE     &kp MINUS   &kp EQUAL  &kp LS(LG(SPACE))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -105,7 +126,7 @@
 &kp TAB    &kp Q   &kp W      &kp E     &kp R      &kp T     &trans  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
 &kp LGUI   &kp A   &kp S      &kp D     &kp F      &kp G     &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X      &kp C     &kp V      &kp B     &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-&trans     &trans  &kp LCTRL  &kp LALT  &kp SPACE  &trans    &to 0   &trans  &trans  &trans     &trans   &trans
+&trans     &trans  &kp LCTRL  &kp LALT  &kp SPACE  &trans    &from_game   &trans  &trans  &trans     &trans   &trans
             >;
         };
     };
