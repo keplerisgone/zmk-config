@@ -70,23 +70,28 @@
         };
 
         // game 레이어 진입: 빨강 약하게 켜기 (hue=0, sat=100, brt=20)
+
         to_game: to_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &to 2>,
-                <&macro_tap &rgb_ug RGB_ON>,
-                <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,20)>;
+                <&macro_tap>,
+                <&to 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_ON>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(0,100,20)>;
+
             label = "TO_GAME";
         };
 
         // game 레이어 탈출: LED 끄기
+
         from_game: from_game {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap &to 0>,
-                <&macro_tap &rgb_ug RGB_OFF>;
+            bindings = <&macro_tap>, <&to 0>, <&macro_tap>, <&rgb_ug RGB_OFF>;
+
             label = "FROM_GAME";
         };
     };
@@ -122,11 +127,11 @@
 
         game {
             bindings = <
-&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4     &kp N5    &trans  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp LS(BSPC)
-&kp TAB    &kp Q   &kp W      &kp E     &kp R      &kp T     &trans  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp LGUI   &kp A   &kp S      &kp D     &kp F      &kp G     &trans  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V      &kp B     &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-&trans     &trans  &kp LCTRL  &kp LALT  &kp SPACE  &trans    &from_game   &trans  &trans  &trans     &trans   &trans
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4     &kp N5    &trans      &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp LS(BSPC)
+&kp TAB    &kp Q   &kp W      &kp E     &kp R      &kp T     &trans      &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
+&kp LGUI   &kp A   &kp S      &kp D     &kp F      &kp G     &trans      &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V      &kp B     &trans      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&trans     &trans  &kp LCTRL  &kp LALT  &kp SPACE  &trans    &from_game  &trans  &trans  &trans     &trans   &trans
             >;
         };
     };
