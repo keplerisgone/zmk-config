@@ -32,6 +32,8 @@
     flavor = "tap-preferred";
 };
 
+&sk { release-after-ms = <3000>; };
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -105,7 +107,7 @@
 &kp TAB      &kp Q               &kp W           &kp E       &kp R             &kp T     &kp DOWN      &kp Y   &kp U             &kp I       &kp O           &kp P                  &kp BSLH
 &kp LGUI     &kp A               &kp S           &kp D       &kp F             &kp G     &kp LEFT      &kp H   &kp J             &kp K      &kp L           &kp SEMI               &kp APOS
 &kp LSHFT    &kp Z               &kp X           &kp C       &kp V             &kp B     &kp RIGHT     &kp N   &kp M             &kp COMMA   &kp DOT         &kp FSLH               &kp ENTER
-&kp C_PAUSE  &kp LS(LG(N4))      &kp LCTRL       &kp LALT    &kp SPACE         &mo 1     &to_game      &mo 1   &kp F17           &kp MINUS   &kp EQUAL       &kp GRAVE
+&kp C_PAUSE  &kp LS(LG(N4))      &kp LCTRL       &kp LALT    &kp SPACE         &sl 1     &to_game      &sl 1   &kp F17           &kp MINUS   &kp EQUAL       &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
