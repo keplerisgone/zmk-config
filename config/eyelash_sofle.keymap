@@ -103,7 +103,7 @@
             bindings = <
 &kp ESC      &kp N1              &kp N2          &kp N3      &kp N4            &kp N5    &kp UP_ARROW  &kp N6  &kp N7            &kp N8      &kp N9          &kp N0                 &kp BACKSPACE
 &kp TAB      &kp Q               &kp W           &kp E       &kp R             &kp T     &kp DOWN      &kp Y   &kp U             &kp I       &kp O           &kp P                  &kp BSLH
-&kp LGUI     &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LCMD D  &mt LEFT_SHIFT F  &kp G     &kp LEFT      &kp H   &mt LEFT_SHIFT J  &mt LCMD K  &mt LEFT_ALT L  &mt LEFT_CONTROL SEMI  &kp APOS
+&kp LGUI     &kp A               &kp S           &kp D       &kp F             &kp G     &kp LEFT      &kp H   &kp J             &kp K      &kp L           &kp SEMI               &kp APOS
 &kp LSHFT    &kp Z               &kp X           &kp C       &kp V             &kp B     &kp RIGHT     &kp N   &kp M             &kp COMMA   &kp DOT         &kp FSLH               &kp ENTER
 &kp C_PAUSE  &kp LS(LG(N4))      &kp LCTRL       &kp LALT    &kp SPACE         &mo 1     &to_game      &mo 1   &kp F17           &kp MINUS   &kp EQUAL       &kp GRAVE
             >;
@@ -116,7 +116,7 @@
             bindings = <
 &kp F1      &kp F2          &kp F3          &kp F4          &kp F5           &kp F6             &mmv MOVE_UP     &kp F7           &kp F8           &kp F9      &kp F10    &kp F11           &kp F12
 &trans      &msc SCRL_UP    &mkp MB2        &mmv MOVE_UP    &mkp MB1         &mkp MB4           &mmv MOVE_DOWN   &kp LS(LG(Y))    &kp END          &kp UP      &kp HOME   &kp LEFT_BRACE    &kp RIGHT_BRACE
-&trans      &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &sk LEFT_CONTROL  &sk LEFT_ALT   &sk LCMD        &sk LEFT_SHIFT    &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &sk LEFT_SHIFT   &sk LCMD     &sk LEFT_ALT  &sk LEFT_CONTROL  &kp RIGHT_BRACKET
 &trans      &bt BT_CLR      &bt BT_SEL 1    &bt BT_SEL 2    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp TILDE         &kp GRAVE
 &kp C_MUTE  &trans          &trans          &trans          &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
