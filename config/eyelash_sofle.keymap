@@ -38,8 +38,7 @@
 };
 
 &sl {
-    release-after-ms = <3000>;
-    ignore-modifiers;
+    release-after-ms = <1000>;
 };
 
 / {
