@@ -32,7 +32,15 @@
     flavor = "tap-preferred";
 };
 
-&sk { release-after-ms = <3000>; };
+&sk {
+    release-after-ms = <3000>;
+    ignore-modifiers;
+};
+
+&sl {
+    release-after-ms = <3000>;
+    ignore-modifiers;
+};
 
 / {
     scroll_encoder: scroll_encoder {
